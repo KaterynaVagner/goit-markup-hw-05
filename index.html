@@ -27,16 +27,16 @@
           
            <ul class=" menu site-nav list link">
             <li class="menu-item">
-              <a href="./index.html" class="site-nav-studio list link"
+              <a href="./index.html" class="site-nav-studio current list link"
                 >Студія</a
               >
-            </li>
+            </li> 
             <li class="menu-item">
-              <a href="./portfolio.html"  class="site-nav list link"
+              <a href="./portfolio.html"  class="site-nav-portfolio current list link"
                 >Портфоліо</a
               >
             </li>
-            <li class="menu-item" ><a href="#" class="site-nav list link">Контакти</a></li>
+            <li class="menu-item" ><a href="#" class="site-nav-contact current list link">Контакти</a></li>
           </ul>
         </nav>
 
@@ -68,55 +68,15 @@
             ВАШОГО БІЗНЕСУ
           </h1>
           <div class="button-conteiner" > 
-          <button type="button" class="hero-button">Замовити послугу</button>
+          <button type="button" class="hero-button" data-modal-open>Замовити послугу</button>
         </div>
 
       </div>
         </section>
      
-           
-       <!--Фон і Падінги-->
-         
-        <!--<ul class="icon-tittle list">
-            <li class="icone-tittle-card">
-              <a href="" class="icon-button">
-              <svg class="icon-one" width="65.32" height="70" >
-              <use href="./images/symbol-defs.svg#icon-icon-one">
-
-            </use>
-            </svg>
-            </a></li> </ul>
-            <li class="icone-tittle-card">
-              <a href="" class="icon-button" >
-              <svg class="icon-two" width="66.96" height="70" >
-              <use href="./images/symbol-defs.svg#icon-icon-two">
-            </use>
-            </svg>
-            </a></li>
-            <li class="icone-tittle-card">
-              <a href=""class="icon-button">
-              <svg class="icon-tree" width="70" height="53.69" >
-              <use href="./images/symbol-defs.svg#icon-icon-three">
-
-            </use>
-            </svg>
-            </a></li>
-
-            <li class="icone-tittle-card">
-              <a href=""class="icon-button">
-              <svg class="icon-four" width="70" height="53.69" >
-              <use href="./images/symbol-defs.svg#icon-icon-four">
-
-            </use>
-            </svg>
-            </a></li>
-          </ul>-->  
-          <section class=" section description-conteiner"> <!--Фон і Падінги-->
+         <section class=" section description-conteiner"> <!--Фон і Падінги-->
             <div class="conteiner"> 
-
-              
-
-          <ul class=" card-set-child card-set list link">
+            <ul class=" card-set-child card-set list link">
               <li class="tittle">
                 <a href="" class="icon-button">
                   <svg class="icon-one" width="65.32" height="70" >
@@ -148,7 +108,6 @@
                 <a href=""class="icon-button">
                   <svg class="icon-tree" width="70" height="53.69" >
                   <use href="./images/symbol-defs.svg#icon-icon-three">
-    
                 </use>
                 </svg>
                 </a>
@@ -162,7 +121,6 @@
                 <a href=""class="icon-button">
                   <svg class="icon-four" width="70" height="53.69" >
                   <use href="./images/symbol-defs.svg#icon-icon-four">
-    
                 </use>
                 </svg>
                 </a>
@@ -182,29 +140,43 @@
           <h2 class="next-tittle">Чим ми займаємося</h2></p>
           <ul class="menu-images list">
             <li class="images">
-              <img
+              <a href="#"> 
+              <div class="box-overley"> 
+                <img
                 class="description-images"
                 src="./images/imglaptop1.jpg"
                 alt="специалист ит сферы пишет код "
-                width="370"
-              />
+                width="370"/>
+              <p class="img-overlay">ДЕСКТОПНІ ДОДАТКИ</p>
+            </div>
+          </a>
             </li>
-            <li class="images"  >
+
+             <li class="images"  >
+              <a href="#"> 
+                <div class="box-overley"> 
               <img
                 class="description-images"
                 src="./images/imglaptop2.jpg"
                 alt="специалист работает с мобильным и ноутбуком "
-                width="370"
-              />
+                width="370"/>
+              <p class="img-overlay ">МОБІЛЬНІ ДОДАТКИ</p>
+            </div>
+          </a>
             </li>
+
             <li class="images" >
+              <a href="#"> 
+                <div class="box-overley">  
               <img
                 class="description-images"
                 src="./images/imglaptop3.jpg"
                 alt="специалист выбырает цветовую палитру на компютере "
-                width="370"
-              />
-            </li>
+                width="370"/>
+                <p class="img-overlay">ДИЗАЙНЕРСЬКІ РІШЕННЯ</p>
+            </div>
+          </a>
+             </li>
           </ul>
         </div>
         </section>
@@ -511,6 +483,14 @@
       </div>
   </div>
      </footer>
- 
+     <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+      <button type="button" class="modal-close-btn" data-modal-close >
+        <svg class="modal-btn-icon" width="11" height="11">
+          <use href="./images/symbol-defs.svg#icon-close-btn"></use>
+           </svg></button>
+      </div>
+      </div>
+      <script src="./js/modal.js"></script>
   </body>
 </html>
