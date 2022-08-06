@@ -100,23 +100,20 @@ body {
 .menu-item:not(:last-child) {
   margin-right: 50px;
 }
-.site-nav {
+.site-nav-studio-one {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: #212121;
+  color: var(--accent-color);
   position: relative;
   display: flex;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.site-nav:hover,
-.site-nav:focus {
-  color: var(--accent-color);
-}
-.site-nav.current::after {
+
+.site-nav-studio-one.current-one::after {
   position: absolute;
   bottom: -34px;
   content: "";
@@ -128,25 +125,71 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.current-one {
+  color: var(--accent-color);
+}
 
-.site-nav-studio {
+.current-one:active::after {
+  background-color: var(--accent-color);
+}
+/*===Portfolio===*/
+.site-nav-portfolio-one {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--accent-color);
-  padding: 0;
-  top: 0;
+  text-decoration: none;
+  color: #000;
   position: relative;
-  display: block;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.site-nav-studio:hover,
-.site-nav-studio:focus {
-  color: #000;
+.site-nav-portfolio-one.current-two::after {
+  position: absolute;
+  bottom: -34px;
+  content: "";
+  display: block;
+  width: 74px;
+  height: 4px;
+  border-radius: 4px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.current-two:active::after {
+  background-color: var(--accent-color);
+}
+/*====Contact====*/
+.site-nav-contact-one {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.site-nav-contact-one.current-three::after {
+  position: absolute;
+  bottom: -34px;
+  content: "";
+  display: block;
+  width: 66px;
+  height: 4px;
+  border-radius: 4px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.current-three:active::after {
+  background-color: var(--accent-color);
+}
+
 /*=================================/SAIT NAV=================================== */
 
 /*=================================EMAIL============================================*/
@@ -170,39 +213,6 @@ body {
 :focus {
   color: var(--accent-color);
 }
-
-.site-nav-studio.current::after {
-  position: absolute;
-  bottom: -34px;
-  content: "";
-  display: block;
-  width: 48px;
-  height: 4px;
-  border-radius: 4px;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.current {
-  color: var(--accent-color);
-}
-.current:hover::after {
-  background-color: var(--accent-color);
-}
-/*.current::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-bottom: -1px;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  transform: translate(0%, 1119%);
-  background-color: var(--accent-color);
-}*/
 
 /*================================/EMAIL=========================================*/
 
@@ -305,16 +315,6 @@ body {
   display: inline-block;
   gap: 30px;
 }
-/*.icon-border {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 270px;
-  height: 120px;
-  border-radius: 4%;
-  background-color: #f5f4fa;
-  margin-bottom: 30px;
-}*/
 
 /*===========================HERO*/
 /* DESCRIPTION=======================================*/
@@ -369,6 +369,7 @@ body {
 }
 .section-next-tittle-conteiner {
   padding-bottom: 95px;
+  background-color: #fff;
 }
 
 /*==============================IMAGES================================================ */
@@ -389,17 +390,14 @@ body {
 }
 .img-overlay {
   font-family: Roboto, sans-serif;
-  font-style: bold;
   font-weight: 700px;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 00.03em;
-  color: #ffffff;
+  color: #fff;
   background-color: rgba(47, 48, 58, 0.8);
   padding-top: 27px;
   padding-bottom: 27px;
-  /*padding-right: 107px;
-  padding-left: 107px;*/
   display: flex;
   justify-content: center;
   position: absolute;
@@ -722,22 +720,52 @@ body {
 .portfolio-nav-email {
   margin-right: 50px;
 }
-.site-nav-contact {
+/*===Studio-Next===*/
+.site-nav-studio-next {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: #212121;
+  text-decoration: none;
+  color: #000;
+  position: relative;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.site-nav-contact:hover,
-.site-nav-contact:focus {
+.site-nav-studio-next.current-one-next::after {
+  position: absolute;
+  bottom: -34px;
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  border-radius: 4px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.current-one-next:active {
   color: var(--accent-color);
 }
-.site-nav-contact.current::after{
+.current-one-next:active::after {
+  background-color: var(--accent-color);
+}
+
+/*===Portfolio===*/
+.site-nav-portfolio-next {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--accent-color);
+  position: relative;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.site-nav-portfolio-next.current-two-next::after {
   position: absolute;
   bottom: -34px;
   content: "";
@@ -750,48 +778,41 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-nav-portfolio {
+.current-two-next:active::after {
+  background-color: var(--accent-color);
+}
+/*===CONTACT-NEXT===*/
+.site-nav-contact-next {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-  color: var(--accent-color);
+  color: #000;
   position: relative;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.site-nav-portfolio:hover,
-.site-nav-portfolio:focus {
-  color: #000;
-}
-.site-nav-portfolio.current::after {
-
-    position: absolute;
-    bottom: -34px;
-    content: "";
-    display: block;
-    width: 74px;
-    height: 4px;
-    border-radius: 4px;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-}
-.current {
-  color: var(--accent-color);
+.site-nav-contact-next.current-three-next::after {
+  position: absolute;
+  bottom: -34px;
+  content: "";
+  display: block;
+  width: 66px;
+  height: 4px;
+  border-radius: 4px;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.current:hover::after,
-.current:focus::after {
+
+.current-three-next:active::after {
+  background-color: var(--accent-color);
+}
+.current-three-next:active {
   color: var(--accent-color);
 }
-
 /*=================================portfolio-nav========================================*/
 
 .portfolio-nav-email {
@@ -1035,6 +1056,8 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -1056,6 +1079,8 @@ body {
   border-bottom-right-radius: 4px;
   box-shadow: 1px 0px, 2px rgba(0, 0, 0, 0.2), 1px 0px, 1px rgba(0, 0, 0, 0.14),
     3px, 0px, 1px, rgba(0, 0, 0, 0.12);
+  transform: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn {
