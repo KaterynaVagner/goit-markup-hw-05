@@ -125,13 +125,14 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.current-one {
-  color: var(--accent-color);
-}
 
 .current-one:active::after {
   background-color: var(--accent-color);
 }
+.current-one:hover::after {
+  background-color: var(--accent-color);
+}
+
 /*===Portfolio===*/
 .site-nav-portfolio-one {
   font-weight: 500;
@@ -160,6 +161,10 @@ body {
 .current-two:active::after {
   background-color: var(--accent-color);
 }
+.current-two:hover::after {
+  background-color: var(--accent-color);
+}
+
 /*====Contact====*/
 .site-nav-contact-one {
   font-weight: 500;
@@ -189,7 +194,9 @@ body {
 .current-three:active::after {
   background-color: var(--accent-color);
 }
-
+.current-three:hover::after {
+  background-color: var(--accent-color);
+}
 /*=================================/SAIT NAV=================================== */
 
 /*=================================EMAIL============================================*/
@@ -391,6 +398,7 @@ body {
 .img-overlay {
   font-family: Roboto, sans-serif;
   font-weight: 700px;
+  font-style: bold;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 00.03em;
@@ -751,6 +759,9 @@ body {
 .current-one-next:active::after {
   background-color: var(--accent-color);
 }
+.current-one-next:hover::after {
+  background-color: var(--accent-color);
+}
 
 /*===Portfolio===*/
 .site-nav-portfolio-next {
@@ -779,6 +790,9 @@ body {
 }
 
 .current-two-next:active::after {
+  background-color: var(--accent-color);
+}
+.current-two-next:hover::after {
   background-color: var(--accent-color);
 }
 /*===CONTACT-NEXT===*/
@@ -812,6 +826,9 @@ body {
 }
 .current-three-next:active {
   color: var(--accent-color);
+}
+.current-three-next:hover::after {
+  background-color: var(--accent-color);
 }
 /*=================================portfolio-nav========================================*/
 
@@ -1072,13 +1089,18 @@ body {
   transform: translate(-50%, -50%);
   width: 528px;
   height: 581px;
+  padding: 40px;
   background-color: #ffffff;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  box-shadow: 1px 0px, 2px rgba(0, 0, 0, 0.2), 1px 0px, 1px rgba(0, 0, 0, 0.14),
+  box-shadow: 1px 0px, 2px rgba(0, 0, 0, 0.2), 1px 0px, 1px rgba(S0, 0, 0, 0.14),
     3px, 0px, 1px, rgba(0, 0, 0, 0.12);
+ transition-property: transform,opacity;
+ transition-duration: 250ms;
+ transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1) ;
+
   transform: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1099,3 +1121,66 @@ body {
 }
 
 /*============================/MODAL BTN===========================================*/
+/*===========================MODAL FORM================================*/
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form-input-desc {
+  display: block;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: #757575;
+  margin-bottom: 4px;
+}
+
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+  color: #212121;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  transition: border-color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+.modal-form-input:focus + .modal-form-input-icon {
+  fill: var(--accent-color);
+}
+.modal-form-field {
+  margin-bottom: 10px;
+}
+.modal-form-mesage {
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.modal-form-iput-wrapper {
+  position: relative;
+  display: block;
+}
+
+.modal-form-input-icon {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  margin-left: 15px;
+  transition: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*===========================/MODAL FORM================================*/
